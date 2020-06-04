@@ -56,3 +56,25 @@ MOUSE_FULL_CORONAL = {
     'exclude_genes': [], # Write here the genes you want to exclude from the cell calling algorithm
     'drop_nan': False,  # That is only a temp solution. I will be removing that when everything is set correctly, Well remove it now!!
 }
+
+
+CHRISTOFFER = {
+    # Hyperparameters
+    'CellCallMaxIter': 100,
+    'CellCallTolerance': 0.02,
+    'Inefficiency': 0.2,
+    'InsideCellBonus': 2,
+    'MisreadDensity': 0.00001,
+    'SpotReg': 0.1,
+    'nNeighbors': 3,
+    'rGene': 20,
+    'rSpot': 2,
+    'max_iter': 100,
+
+    # Inputs to the cell calling algorithm
+    'scRNAseq': os.path.join(ROOT_DIR, 'data', 'cell_call_demo_data', 'mouse_full_coronal', 'cell_type_input', 'scRNAseq.csv.gz'),
+    'saFile': os.path.join(ROOT_DIR, 'data', 'cell_call_demo_data', 'christoffer', 'spots.csv'),  # Spot attributes, contains x,y coordinates for the spots and their gene names
+    'expanded_cells':  os.path.join(ROOT_DIR, 'data', 'cell_call_demo_data', 'christoffer', 'cells.csv'),
+    'exclude_genes': ['Ppapdc1a'], # Write here the genes you want to exclude from the cell calling algorithm
+    'drop_nan': False,  # That is only a temp solution. I will be removing that when everything is set correctly, Well remove it now!!
+}

@@ -13,10 +13,10 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    case = 'MOUSE_FULL_CORONAL'  # 'MOUSE' or 'HUMAN'
+    case = 'CHRISTOFFER'  # 'MOUSE' or 'HUMAN'
 
     my_config = getattr(config, case)
-    out_dir = os.path.join(config.ROOT_DIR, 'data', 'cell_call_demo_data',  case, 'cell_type_output')
+    out_dir = os.path.join(config.ROOT_DIR, 'data', 'cell_call_demo_data',  case.lower(), 'cell_type_output')
 
     # 1. run the cell calling algo
     cellData, geneData = varBayes(my_config)
